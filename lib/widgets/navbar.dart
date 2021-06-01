@@ -95,7 +95,7 @@ class _NavbarState extends State<Navbar> {
           bottom: false,
           child: Padding(
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-            child: Column(
+            child: ListView(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

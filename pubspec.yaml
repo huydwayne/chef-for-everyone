@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   scrollable_positioned_list: ^0.1.7
-  carousel_slider: ^2.2.1
+  carousel_slider: ^3.0.0
   font_awesome_flutter: ^8.8.1
 
 
@@ -49,10 +49,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/img/onboard-background.jpg
-    - assets/img/onboard-background-free.jpeg
-    - assets/img/logo-android.png
-    - assets/img/logo-ios.png
+    - assets/
+    - assets/img/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

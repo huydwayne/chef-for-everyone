@@ -57,9 +57,9 @@ class Onboarding extends StatelessWidget {
                     width: double.infinity,
                     child: FlatButton(
                       textColor: Colors.white,
-                      color: MaterialColors.info,
+                      color: MaterialColors.active,
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/home');
+                        Navigator.pushReplacementNamed(context, '/login');
                       },
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4.0),
@@ -67,7 +67,7 @@ class Onboarding extends StatelessWidget {
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 16.0, right: 16.0, top: 12, bottom: 12),
-                          child: Text("Tham gia",
+                          child: Text("Đăng nhập",
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16.0))),

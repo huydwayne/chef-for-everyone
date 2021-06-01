@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 
 //widgets
@@ -8,6 +8,18 @@ import 'package:material_kit_flutter/widgets/card-horizontal.dart';
 import 'package:material_kit_flutter/widgets/card-small.dart';
 import 'package:material_kit_flutter/widgets/card-square.dart';
 import 'package:material_kit_flutter/widgets/drawer.dart';
+
+final List<String> listAds = [
+  'assets/img/ad2.jpg',
+  'assets/img/ad1.png',
+  'assets/img/bottomSlide4.jpg',
+];
+
+final List<String> listFood = [
+  'assets/img/bottomSlide3.jpg',
+  'assets/img/bottomSlide2.jpg',
+  'assets/img/bottomSlide1.jpg',
+];
 
 final Map<String, Map<String, String>> homeCards = {
   "Ice Cream": {
@@ -49,9 +61,10 @@ class Home extends StatelessWidget {
     return Scaffold(
         appBar: Navbar(
           title: "Trang chủ",
-          searchBar: true,
-          categoryOne: "Dịch vụ",
-          categoryTwo: "Thêm bài viết",
+          rightOptions: false,
+          // searchBar: true,
+          // categoryOne: "Dịch vụ",
+          // categoryTwo: "Thêm bài viết",
         ),
         backgroundColor: MaterialColors.bgColorScreen,
         // key: _scaffoldKey,
@@ -61,56 +74,109 @@ class Home extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 16.0),
-                  child: CardHorizontal(
-                    cta: "Xem bài viết",
-                    title: homeCards["Ice Cream"]['title'],
-                    img: homeCards["Ice Cream"]['image'],
-                    // tap: () {
-                    //   Navigator.pushReplacementNamed(context, '/pro');
-                    // }
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    viewportFraction: 1.0,
+                    enlargeCenterPage: false,
                   ),
+                  items: listAds
+                      .map((item) => Container(
+                          child: Center(
+                              child: Image.asset(item,
+                                  fit: BoxFit.cover, width: 1000))))
+                      .toList(),
                 ),
-                // SizedBox(height: 8.0),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     CardSmall(
-                //         cta: "View article",
-                //         title: homeCards["Makeup"]['title'],
-                //         img: homeCards["Makeup"]['image'],
-                //         tap: () {
-                //           Navigator.pushReplacementNamed(context, '/pro');
-                //         }),
-                //     CardSmall(
-                //         cta: "View article",
-                //         title: homeCards["Coffee"]['title'],
-                //         img: homeCards["Coffee"]['image'],
-                //         tap: () {
-                //           Navigator.pushReplacementNamed(context, '/pro');
-                //         })
-                //   ],
-                // ),
-                // SizedBox(height: 8.0),
-                // CardHorizontal(
-                //     cta: "View article",
-                //     title: homeCards["Fashion"]['title'],
-                //     img: homeCards["Fashion"]['image'],
-                //     tap: () {
-                //       Navigator.pushReplacementNamed(context, '/pro');
-                //     }),
-                // SizedBox(height: 8.0),
-                // Padding(
-                //   padding: const EdgeInsets.only(bottom: 32.0),
-                //   child: CardSquare(
-                //       cta: "View article",
-                //       title: homeCards["Argon"]['title'],
-                //       img: homeCards["Argon"]['image'],
-                //       tap: () {
-                //         Navigator.pushReplacementNamed(context, '/pro');
-                //       }),
-                // )
+                SizedBox(
+                  height: 30.0,
+                ),
+                Row(
+                  children: <Widget>[
+                    new Expanded(
+                      flex: 5,
+                      child: Column(
+                        children: <Widget>[
+                          new RawMaterialButton(
+                            onPressed: () {},
+                            elevation: 2.0,
+                            fillColor: Colors.white,
+                            child: Text("Món Á"),
+                            padding: EdgeInsets.all(50.0),
+                            shape: CircleBorder(),
+                          )
+                        ],
+                      ),
+                    ),
+                    new Expanded(
+                      flex: 5,
+                      child: Column(
+                        children: <Widget>[
+                          new RawMaterialButton(
+                            onPressed: () {},
+                            elevation: 2.0,
+                            fillColor: Colors.white,
+                            child: Text("Món Âu"),
+                            padding: EdgeInsets.all(50.0),
+                            shape: CircleBorder(),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: <Widget>[
+                    new Expanded(
+                      flex: 5,
+                      child: Column(
+                        children: <Widget>[
+                          new RawMaterialButton(
+                            onPressed: () {},
+                            elevation: 2.0,
+                            fillColor: Colors.white,
+                            child: Text("Gia đình"),
+                            padding: EdgeInsets.all(50.0),
+                            shape: CircleBorder(),
+                          )
+                        ],
+                      ),
+                    ),
+                    new Expanded(
+                      flex: 5,
+                      child: Column(
+                        children: <Widget>[
+                          new RawMaterialButton(
+                            onPressed: () {},
+                            elevation: 2.0,
+                            fillColor: Colors.white,
+                            child: Text("Sự kiện"),
+                            padding: EdgeInsets.all(50.0),
+                            shape: CircleBorder(),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    viewportFraction: 1.0,
+                    enlargeCenterPage: false,
+                  ),
+                  items: listFood
+                      .map((item) => Container(
+                          child: Center(
+                              child: Image.asset(item,
+                                  fit: BoxFit.cover, width: 1000))))
+                      .toList(),
+                ),
               ],
             ),
           ),
