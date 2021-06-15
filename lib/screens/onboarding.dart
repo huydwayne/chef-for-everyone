@@ -11,7 +11,7 @@ class Onboarding extends StatelessWidget {
       Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/img/onboard-background-free.jpeg"),
+                  image: AssetImage("assets/img/Logo-My-Chef.jpg"),
                   fit: BoxFit.cover))),
       Padding(
         padding:

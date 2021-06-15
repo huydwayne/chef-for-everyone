@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:material_kit_flutter/screens/home.dart';
 import 'package:material_kit_flutter/screens/login.dart';
 import 'package:material_kit_flutter/screens/register.dart';
 
 // screens
-import '/screens/home.dart';
+import 'screens/home.dart';
 import 'screens/profile.dart';
 import 'screens/settings.dart';
 import 'screens/components.dart';
