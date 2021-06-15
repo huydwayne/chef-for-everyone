@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key key}) : super(key: key);
+class ChangePassword extends StatefulWidget {
+  ChangePassword({Key key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _ChangePassword createState() => _ChangePassword();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ChangePassword extends State<ChangePassword> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   @override
   Widget build(BuildContext context) {
-    final emailField = TextField(
+    final otpField = TextField(
       obscureText: false,
       style: style,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Email",
+          hintText: "Nhập mã otp",
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -31,6 +31,15 @@ class _LoginPageState extends State<LoginPage> {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
+    final rePasswordField = TextField(
+      obscureText: true,
+      style: style,
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Nhập lại mật khẩu",
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -39,46 +48,12 @@ class _LoginPageState extends State<LoginPage> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/home');
+          Navigator.pushReplacementNamed(context, '/login');
         },
-        child: Text("Đăng nhập",
+        child: Text("Gửi",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),
-      ),
-    );
-
-    final registerButton = Material(
-      // elevation: 5.0,
-      // borderRadius: BorderRadius.circular(30.0),
-      color: Colors.white,
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, '/register');
-        },
-        child: Text("Đăng ký",
-            textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.black, fontWeight: FontWeight.w500)),
-      ),
-    );
-
-    final forgetPasswordButton = Material(
-      // elevation: 5.0,
-      // borderRadius: BorderRadius.circular(30.0),
-      color: Colors.white,
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, '/sendotp');
-        },
-        child: Text("Quên mật khẩu",
-            textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.black, fontWeight: FontWeight.w500)),
       ),
     );
 
@@ -101,23 +76,17 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(height: 45.0),
-                emailField,
+                otpField,
                 SizedBox(height: 25.0),
                 passwordField,
+                SizedBox(height: 25.0),
+                rePasswordField,
                 SizedBox(
                   height: 35.0,
                 ),
                 loginButon,
                 SizedBox(
                   height: 10.0,
-                ),
-                registerButton,
-                SizedBox(
-                  height: 15.0,
-                ),
-                forgetPasswordButton,
-                SizedBox(
-                  height: 15.0,
                 ),
               ],
             ),
