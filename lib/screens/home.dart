@@ -54,7 +54,13 @@ final Map<String, Map<String, String>> homeCards = {
   }
 };
 
-class Home extends StatelessWidget {
+class MainHome extends StatefulWidget {
+  MainHome({Key key}) : super(key: key);
+  @override
+  _MainHomeStage createState() => _MainHomeStage();
+}
+
+class _MainHomeStage extends State<MainHome> {
   // final GlobalKey _scaffoldKey = new GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -97,11 +103,14 @@ class Home extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           new RawMaterialButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(
+                                  context, '/chef-list');
+                            },
                             elevation: 2.0,
                             fillColor: Colors.white,
                             child: Text("Món Á"),
-                            padding: EdgeInsets.all(50.0),
+                            padding: EdgeInsets.all(20.0),
                             shape: CircleBorder(),
                           )
                         ],
@@ -112,11 +121,14 @@ class Home extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           new RawMaterialButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(
+                                  context, '/chef-list');
+                            },
                             elevation: 2.0,
                             fillColor: Colors.white,
                             child: Text("Món Âu"),
-                            padding: EdgeInsets.all(50.0),
+                            padding: EdgeInsets.all(20.0),
                             shape: CircleBorder(),
                           )
                         ],
@@ -134,11 +146,14 @@ class Home extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           new RawMaterialButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(
+                                  context, '/chef-list');
+                            },
                             elevation: 2.0,
                             fillColor: Colors.white,
                             child: Text("Gia đình"),
-                            padding: EdgeInsets.all(50.0),
+                            padding: EdgeInsets.all(20.0),
                             shape: CircleBorder(),
                           )
                         ],
@@ -149,11 +164,14 @@ class Home extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           new RawMaterialButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(
+                                  context, '/chef-list');
+                            },
                             elevation: 2.0,
                             fillColor: Colors.white,
                             child: Text("Sự kiện"),
-                            padding: EdgeInsets.all(50.0),
+                            padding: EdgeInsets.all(20.0),
                             shape: CircleBorder(),
                           )
                         ],
