@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_kit_flutter/screens/chef-detail.dart';
 import 'package:material_kit_flutter/screens/home.dart';
 import 'package:material_kit_flutter/screens/login.dart';
 import 'package:material_kit_flutter/screens/register.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Chef for Everyone",
         debugShowCheckedModeBanner: false,
-        initialRoute: "/onboarding",
+        initialRoute: "/chef-detail",
         routes: <String, WidgetBuilder>{
           "/onboarding": (BuildContext context) => new Onboarding(),
           "/login": (BuildContext context) => new LoginPage(),
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
           "/profile": (BuildContext context) => new Profile(),
           "/settings": (BuildContext context) => new Settings(),
           "/chef-list": (BuildContext context) => new ChefList(),
+          "/chef-detail": (BuildContext context) => new CheftDetail(),
         });
   }
 }

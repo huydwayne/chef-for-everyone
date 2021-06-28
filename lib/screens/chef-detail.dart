@@ -2,12 +2,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
-void main() {
-  runApp(MyApp());
+class CheftDetail extends StatefulWidget {
+  CheftDetail({Key key}) : super(key: key);
+  @override
+  _CheftDetail createState() => _CheftDetail();
 }
 
-class MyApp extends StatelessWidget {
+class _CheftDetail extends State<CheftDetail> {
   // This widget is the root of your application.
+  int _count = 0;
+
+  void _handleAddToCart(action) {
+    setState(() {
+      if (action == "remove") {
+        _count -= 1;
+      } else if (action == "add") {
+        _count += 1;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -73,7 +87,26 @@ class MyApp extends StatelessWidget {
                 child: ListView(
                   children: [
                     ListTile(
-                      trailing: Icon(Icons.check_box_outline_blank, size: 25,),
+                      trailing: Wrap(spacing: 5, children: <Widget>[
+                        // Text(_count.toString()),
+                        (_count > 0
+                            ? new IconButton(
+                                onPressed: () => _handleAddToCart("remove"),
+                                icon: Icon(
+                                  Icons.remove_circle,
+                                  size: 22,
+                                  color: Colors.grey,
+                                ))
+                            : Text("")),
+                        (_count > 0 ? Text(_count.toString()) : Text("")),
+                        new IconButton(
+                            onPressed: () => _handleAddToCart("add"),
+                            icon: Icon(
+                              Icons.add_circle,
+                              size: 22,
+                              color: Colors.red,
+                            )),
+                      ]),
                       selected: true,
                       leading: Container(
                         child: Image.asset(
@@ -84,8 +117,6 @@ class MyApp extends StatelessWidget {
                       ),
                       title: Text("Beef Steak With Cream Butter "),
                       subtitle: Text("20 dollar/dish"),
-                      onTap: () {},
-
                     ),
                     ListTile(
                       leading: CircleAvatar(

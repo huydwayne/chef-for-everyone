@@ -6,6 +6,28 @@ class ChefList extends StatefulWidget {
   _ChefListStage createState() => _ChefListStage();
 }
 
+Row RatingValue({double stars}) {
+  final children = <Widget>[];
+  var starLeft = stars;
+  for (var i = 0; i < stars; i++) {
+    children.add(Image.asset(
+      "assets/img/star.png",
+      height: 15,
+    ));
+    starLeft = starLeft - 1;
+  }
+  if (starLeft == -0.5) {
+    children.removeAt(0);
+    children.add(Image.asset(
+      "assets/img/half_star.png",
+      height: 15,
+    ));
+  }
+  return Row(
+    children: children,
+  );
+}
+
 class _ChefListStage extends State<ChefList> {
   @override
   Widget build(BuildContext context) {
@@ -38,8 +60,10 @@ class _ChefListStage extends State<ChefList> {
               leading:
                   Image(image: new AssetImage("assets/img/chef-Img-1.jpg")),
               title: Text("Golden Ramsey"),
-              subtitle: Text("Top 10 chef of the world"),
-              onTap: () {},
+              subtitle: RatingValue(stars: 3.5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
             ListTile(
               leading: CircleAvatar(
