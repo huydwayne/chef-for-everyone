@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:badges/badges.dart';
 
 class CheftDetail extends StatefulWidget {
   CheftDetail({Key key}) : super(key: key);
@@ -28,18 +29,14 @@ class _CheftDetail extends State<CheftDetail> {
       title: 'Flutter Demo',
       home: Scaffold(
         backgroundColor: Color(0xffffba08),
-        appBar: AppBar(
-          title: Text("This is my second "),
-          backgroundColor: Colors.blue,
-        ),
+
         body: Column(
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
               ),
-              padding: EdgeInsets.all(10),
-              margin: EdgeInsets.fromLTRB(20, 0, 20, 5),
+              padding: EdgeInsets.fromLTRB(0, 30, 0, 5),
               alignment: Alignment.center,
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/img/chef.jpg'),
@@ -61,15 +58,16 @@ class _CheftDetail extends State<CheftDetail> {
                   ),
                 ],
               ),
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 2),
             ),
-            Expanded(
+            Container(
               child: Container(
+                height: 200,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30)),
+                      topLeft: Radius.circular(300),
+                      topRight: Radius.circular(0)),
                   color: Colors.white,
                 ),
                 child: Column(
@@ -87,7 +85,7 @@ class _CheftDetail extends State<CheftDetail> {
                 child: ListView(
                   children: [
                     ListTile(
-                      trailing: Wrap(spacing: 5, children: <Widget>[
+                      trailing: Wrap(spacing: 2, children: <Widget>[
                         // Text(_count.toString()),
                         (_count > 0
                             ? new IconButton(
@@ -97,14 +95,14 @@ class _CheftDetail extends State<CheftDetail> {
                                   size: 22,
                                   color: Colors.grey,
                                 ))
-                            : Text("")),
-                        (_count > 0 ? Text(_count.toString()) : Text("")),
+                            : Text('')),
+                        (_count > 0 ? Text(_count.toString()) : Text('')),
                         new IconButton(
                             onPressed: () => _handleAddToCart("add"),
                             icon: Icon(
                               Icons.add_circle,
                               size: 22,
-                              color: Colors.red,
+                              color: Colors.orange,
                             )),
                       ]),
                       selected: true,
@@ -195,6 +193,52 @@ class _CheftDetail extends State<CheftDetail> {
                 ),
               ),
             ),
+            //Row này dành cho phần CART NAVIGATION
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                //Cái này hiển thị cho số lượng hàng có trong CART
+                SizedBox(
+                  width: 10,
+                ),
+                Badge(
+                  padding: EdgeInsets.all(5),
+                  badgeContent: Text('2'),
+                  child: Container(
+                    child: Icon(
+                      Icons.fastfood_sharp,
+                      size: 40,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  '81000đ',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: 100,
+                ),
+                //Này là Button HOÀN TẤT
+                TextButton(
+                  child: Container(
+                    child: Text(
+                      'Hoàn Tất',
+                      textAlign: TextAlign.center,
+                    ),
+                    width: 100,
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: Colors.amber,
+                    ),
+                  ),
+                  onPressed: () {},
+                ),
+              ],
+            )
           ],
         ),
       ),
@@ -202,6 +246,7 @@ class _CheftDetail extends State<CheftDetail> {
   }
 }
 
+// Này để hiển thị thông tin liên lạc của CHEF
 Row chefLocation({String name}) {
   return Row(
     children: [
