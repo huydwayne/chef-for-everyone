@@ -36,7 +36,7 @@ class _ChefListStage extends State<ChefList> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Danh sách đầu bếp gần bạn"),
+          title: Text("Danh sách đầu bếp Âu gần bạn"),
         ),
         body: ListView(
           padding: EdgeInsets.all(0),
@@ -52,9 +52,9 @@ class _ChefListStage extends State<ChefList> {
                   backgroundColor: Colors.transparent,
                 ),
               ),
-              title: Text("Đầu bếp Phạm Tuấn Hải"),
+              title: Text("Đầu bếp John Hải"),
               subtitle: RatingValue(stars: 5),
-              trailing: Text("2km"),
+              trailing: Text("2 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -72,7 +72,7 @@ class _ChefListStage extends State<ChefList> {
               ),
               title: Text("Đầu bếp David Thái"),
               subtitle: RatingValue(stars: 5),
-              trailing: Text("7km"),
+              trailing: Text("7 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -90,7 +90,7 @@ class _ChefListStage extends State<ChefList> {
               ),
               title: Text("Đầu bếp Christine Hà"),
               subtitle: RatingValue(stars: 5),
-              trailing: Text("8km"),
+              trailing: Text("8 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -108,7 +108,7 @@ class _ChefListStage extends State<ChefList> {
               ),
               title: Text("Đầu bếp Luke Nguyễn"),
               subtitle: RatingValue(stars: 5),
-              trailing: Text("12km"),
+              trailing: Text("12 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -126,7 +126,7 @@ class _ChefListStage extends State<ChefList> {
               ),
               title: Text("Đầu bếp Phan Tôn Tịnh Hải"),
               subtitle: RatingValue(stars: 5),
-              trailing: Text("21km"),
+              trailing: Text("21 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
