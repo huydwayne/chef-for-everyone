@@ -24,11 +24,53 @@ class _CheftDetail extends State<CheftDetail> {
     },
     {
       "id": 2,
-      "name": "Beef Steak",
-      "img": "assets/img/beef.jpg",
+      "name": "Soup KingCrab",
+      "img": "assets/img/soupkingcrab.jpg",
       "price": 40,
       "amount": 0,
-    }
+    },
+    {
+      "id": 3,
+      "name": "Bread With sheep meat",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
+    {
+      "id": 4,
+      "name": "Pasta ",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
+    {
+      "id": 5,
+      "name": "Noodle with Cheese Sauce",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
+    {
+      "id": 6,
+      "name": "Horney Pancake ",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
+    {
+      "id": 7,
+      "name": "Salmon Drilled",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
+    {
+      "id": 8,
+      "name": "Shrimp Steam",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
   ];
 
   List<Widget> getList() {

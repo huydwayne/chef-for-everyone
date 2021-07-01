@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class ChefList extends StatefulWidget {
@@ -34,7 +36,7 @@ class _ChefListStage extends State<ChefList> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Danh sách đầu bếp Âu "),
+          title: Text("Danh sách đầu bếp gần bạn"),
         ),
         body: ListView(
           padding: EdgeInsets.all(0),
@@ -42,16 +44,18 @@ class _ChefListStage extends State<ChefList> {
             //chef 1
             ListTile(
               leading: Container(
-                height: 100,
+                height: 500,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://static5.depositphotos.com/1003434/514/i/600/depositphotos_5147838-stock-photo-attractive-smiling-cook.jpg"),
+                  backgroundImage:
+                  NetworkImage("https://3.bp.blogspot.com/-JpzRXm28kig/W-T1_Nk2E0I/AAAAAAAAOE4/yojKR7JtOHAb8AmzbsVWU26NH_3DiVV4wCLcBGAs/s1600/masterchef-404-xa-dan-14.jpg"),
                   backgroundColor: Colors.transparent,
+
                 ),
               ),
-              title: Text("David Ron Sulivan"),
+              title: Text("Đầu bếp Phạm Tuấn Hải"),
               subtitle: RatingValue(stars: 5),
+              trailing: Text("2km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -62,13 +66,14 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://onha.vn/images/chef/beirutJalalHawchar.jpg"),
+                  backgroundImage:
+                  NetworkImage("https://www.hoidaubepaau.com/wp-content/uploads/2015/12/david-thai.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
-              title: Text("David Ron Sulivan"),
+              title: Text("Đầu bếp David Thái"),
               subtitle: RatingValue(stars: 5),
+              trailing: Text("7km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -80,12 +85,13 @@ class _ChefListStage extends State<ChefList> {
                 width: 100,
                 child: CircleAvatar(
                   backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                  NetworkImage("https://cafefcdn.com/2019/4/7/photo-1-15546000948151579336019.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
-              title: Text("David Ron Sulivan"),
+              title: Text("Đầu bếp Christine Hà"),
               subtitle: RatingValue(stars: 5),
+              trailing: Text("8km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -97,12 +103,13 @@ class _ChefListStage extends State<ChefList> {
                 width: 100,
                 child: CircleAvatar(
                   backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                  NetworkImage("https://cafefcdn.com/thumb_w/650/2018/3/21/photo1521601954915-15216019549151787812293.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
-              title: Text("David Ron Sulivan"),
+              title: Text("Đầu bếp Luke Nguyễn"),
               subtitle: RatingValue(stars: 5),
+              trailing: Text("12km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -114,135 +121,18 @@ class _ChefListStage extends State<ChefList> {
                 width: 100,
                 child: CircleAvatar(
                   backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                  NetworkImage("https://tomimarkets.net/wp-content/uploads/2020/07/dau-bep-Phan-Ton-Tinh-Hai-2-Tomimarkets.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
-              title: Text("David Ron Sulivan"),
+              title: Text("Đầu bếp Phan Tôn Tịnh Hải"),
               subtitle: RatingValue(stars: 5),
+              trailing: Text("21km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
             ),
-            //chef 6
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            //chef 7
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            //chef 8
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            //chef 9
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            //chef 10
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            //chef 11
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            //chef 12
-            ListTile(
-              leading: Container(
-                height: 100,
-                width: 100,
-                child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-              title: Text("David Ron Sulivan"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
+
           ],
         ),
         floatingActionButton: FloatingActionButton(
