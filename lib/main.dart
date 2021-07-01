@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Chef for Everyone",
         debugShowCheckedModeBanner: false,
-        initialRoute: "/chef-detail",
+        initialRoute: "/home",
         routes: <String, WidgetBuilder>{
           "/onboarding": (BuildContext context) => new Onboarding(),
           "/login": (BuildContext context) => new LoginPage(),

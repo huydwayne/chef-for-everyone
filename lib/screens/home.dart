@@ -98,26 +98,51 @@ class _MainHomeStage extends State<MainHome> {
                 ),
                 Row(
                   children: <Widget>[
-                    new Expanded(
-                      flex: 5,
-                      child: Column(
-                        children: <Widget>[
-                          new RawMaterialButton(
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(
-                                  context, '/chef-list');
-                            },
-                            elevation: 2.0,
-                            fillColor: Colors.white,
-                            child: Text("Món Á"),
-                            padding: EdgeInsets.all(20.0),
-                            shape: CircleBorder(),
-                          )
-                        ],
+                    TextButton(
+                      child: Container(
+                        child: Text(
+                          'Món Á',
+                          textAlign: TextAlign.center,
+                        ),
+                        width: 100,
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          image: DecorationImage(
+                              image: AssetImage('assets/img/beef.jpg')),
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/chef-list');
+                      },
                     ),
-                    new Expanded(
-                      flex: 5,
+                    //món á
+                    // Container(
+                    //   child: Column(
+                    //     children: <Widget>[
+                    //       new RawMaterialButton(
+                    //         onPressed: () {
+                    //           Navigator.pushReplacementNamed(
+                    //               context, '/chef-list');
+                    //         },
+                    //
+                    //         elevation: 2.0,
+                    //         fillColor: Colors.white,
+                    //         child:Container(
+                    //           child: Row(
+                    //             children: [
+                    //               Container(
+                    //               )
+                    //             ],
+                    //           ),
+                    //         ),
+                    //         padding: EdgeInsets.all(20.0),
+                    //         shape: CircleBorder(),
+                    //       )
+                    //     ],
+                    //   ),
+                    // ),
+                    Container(
                       child: Column(
                         children: <Widget>[
                           new RawMaterialButton(
@@ -134,15 +159,7 @@ class _MainHomeStage extends State<MainHome> {
                         ],
                       ),
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                Row(
-                  children: <Widget>[
-                    new Expanded(
-                      flex: 5,
+                    Container(
                       child: Column(
                         children: <Widget>[
                           new RawMaterialButton(
@@ -159,26 +176,51 @@ class _MainHomeStage extends State<MainHome> {
                         ],
                       ),
                     ),
-                    new Expanded(
-                      flex: 5,
-                      child: Column(
-                        children: <Widget>[
-                          new RawMaterialButton(
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(
-                                  context, '/chef-list');
-                            },
-                            elevation: 2.0,
-                            fillColor: Colors.white,
-                            child: Text("Sự kiện"),
-                            padding: EdgeInsets.all(20.0),
-                            shape: CircleBorder(),
-                          )
-                        ],
-                      ),
-                    ),
                   ],
                 ),
+                SizedBox(
+                  height: 40,
+                ),
+                // Row(
+                //   children: <Widget>[
+                //     new Expanded(
+                //       flex: 5,
+                //       child: Column(
+                //         children: <Widget>[
+                //           new RawMaterialButton(
+                //             onPressed: () {
+                //               Navigator.pushReplacementNamed(
+                //                   context, '/chef-list');
+                //             },
+                //             elevation: 2.0,
+                //             fillColor: Colors.white,
+                //             child: Text("Gia đình"),
+                //             padding: EdgeInsets.all(20.0),
+                //             shape: CircleBorder(),
+                //           )
+                //         ],
+                //       ),
+                //     ),
+                //     // new Expanded(
+                //     //   flex: 5,
+                //     //   child: Column(
+                //     //     children: <Widget>[
+                //     //       new RawMaterialButton(
+                //     //         onPressed: () {
+                //     //           Navigator.pushReplacementNamed(
+                //     //               context, '/chef-list');
+                //     //         },
+                //     //         elevation: 2.0,
+                //     //         fillColor: Colors.white,
+                //     //         child: Text("Sự kiện"),
+                //     //         padding: EdgeInsets.all(20.0),
+                //     //         shape: CircleBorder(),
+                //     //       )
+                //     //     ],
+                //     //   ),
+                //     // ),
+                //   ],
+                // ),
                 SizedBox(
                   height: 30.0,
                 ),
@@ -201,3 +243,47 @@ class _MainHomeStage extends State<MainHome> {
         ));
   }
 }
+
+// class ItemList extends StatelessWidget {
+//   const ItemList({
+//     Key key,
+//   }) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return SingleChildScrollView(
+//       scrollDirection: Axis.horizontal,
+//       child: Row(
+//         children: <Widget>[
+//           ItemCard(
+//             svgSrc: "assets/icons/burger_beer.svg",
+//             title: "Món Âu",
+//
+//             press: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                   builder: (context) {
+//                     return DetailsScreen();
+//                   },
+//                 ),
+//               );
+//             },
+//           ),
+//           ItemCard(
+//             svgSrc: "assets/icons/chinese_noodles.svg",
+//             title: "Món Á",
+//
+//             press: () {},
+//           ),
+//           ItemCard(
+//             svgSrc: "assets/icons/burger_beer.svg",
+//             title: "Món Âu",
+//
+//             press: () {},
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }
