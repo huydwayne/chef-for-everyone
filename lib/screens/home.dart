@@ -109,18 +109,23 @@ class _MainHomeStage extends State<MainHome> {
                   children: <Widget>[
                     TextButton(
                       child: Container(
-                        child: Text(
-                          'Món Á',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.lime),
+                        child: Center(
+                          child: Text('Món Á',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              )),
                         ),
                         width: 110,
-                        height: 110,
+                        height: 100,
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
-                          image: DecorationImage(
-                              image: AssetImage('assets/img/asian_button.jpg')),
+                          color: Colors.lightGreen,
+                          // image: DecorationImage(
+                          //   image: AssetImage('assets/img/asian_button.jpg'),
+                          // ),
                         ),
                       ),
                       onPressed: () {
@@ -130,18 +135,23 @@ class _MainHomeStage extends State<MainHome> {
 
                     TextButton(
                       child: Container(
-                        child: Text(
-                          'Món Âu',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.lime),
+                        child: Center(
+                          child: Text('Món Âu',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              )),
                         ),
                         width: 110,
-                        height: 110,
+                        height: 100,
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
-                          image: DecorationImage(
-                              image: AssetImage('assets/img/europe_button.jpg')),
+                          color: Colors.orange,
+                          // image: DecorationImage(
+                          //   image: AssetImage('assets/img/europe_button.jpg'),
+                          // ),
                         ),
                       ),
                       onPressed: () {
@@ -151,19 +161,24 @@ class _MainHomeStage extends State<MainHome> {
 
                     TextButton(
                       child: Container(
-                        child: Text(
-                          'Gia Đình',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.lime),
+                        child: Center(
+                          child: Text('Món Ăn Gia Đình',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              )),
                         ),
                         width: 110,
-                        height: 110,
+                        height: 100,
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          image: DecorationImage(
-                              image: AssetImage('assets/img/asian_button.jpg')),
-                        ),
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            color: Colors.amberAccent
+                            // image: DecorationImage(
+                            //   image: AssetImage('assets/img/asian_button.jpg'),
+                            // ),
+                            ),
                       ),
                       onPressed: () {
                         Navigator.pushReplacementNamed(context, '/chef-list');
