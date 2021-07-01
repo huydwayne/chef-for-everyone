@@ -47,10 +47,9 @@ class _ChefListStage extends State<ChefList> {
                 height: 500,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                  NetworkImage("https://3.bp.blogspot.com/-JpzRXm28kig/W-T1_Nk2E0I/AAAAAAAAOE4/yojKR7JtOHAb8AmzbsVWU26NH_3DiVV4wCLcBGAs/s1600/masterchef-404-xa-dan-14.jpg"),
+                  backgroundImage: NetworkImage(
+                      "https://3.bp.blogspot.com/-JpzRXm28kig/W-T1_Nk2E0I/AAAAAAAAOE4/yojKR7JtOHAb8AmzbsVWU26NH_3DiVV4wCLcBGAs/s1600/masterchef-404-xa-dan-14.jpg"),
                   backgroundColor: Colors.transparent,
-
                 ),
               ),
               title: Text("Đầu bếp Phạm Tuấn Hải"),
@@ -66,8 +65,8 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                  NetworkImage("https://www.hoidaubepaau.com/wp-content/uploads/2015/12/david-thai.jpg"),
+                  backgroundImage: NetworkImage(
+                      "https://www.hoidaubepaau.com/wp-content/uploads/2015/12/david-thai.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
@@ -84,8 +83,8 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                  NetworkImage("https://cafefcdn.com/2019/4/7/photo-1-15546000948151579336019.jpg"),
+                  backgroundImage: NetworkImage(
+                      "https://cafefcdn.com/2019/4/7/photo-1-15546000948151579336019.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
@@ -102,8 +101,8 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                  NetworkImage("https://cafefcdn.com/thumb_w/650/2018/3/21/photo1521601954915-15216019549151787812293.jpg"),
+                  backgroundImage: NetworkImage(
+                      "https://cafefcdn.com/thumb_w/650/2018/3/21/photo1521601954915-15216019549151787812293.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
@@ -120,8 +119,8 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                  NetworkImage("https://tomimarkets.net/wp-content/uploads/2020/07/dau-bep-Phan-Ton-Tinh-Hai-2-Tomimarkets.jpg"),
+                  backgroundImage: NetworkImage(
+                      "https://tomimarkets.net/wp-content/uploads/2020/07/dau-bep-Phan-Ton-Tinh-Hai-2-Tomimarkets.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
@@ -132,7 +131,6 @@ class _ChefListStage extends State<ChefList> {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
             ),
-
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -144,8 +142,8 @@ class _ChefListStage extends State<ChefList> {
             padding: EdgeInsets.all(0),
             children: [
               UserAccountsDrawerHeader(
-                accountEmail: Text("Akram.aic193@Gmail.com"),
-                accountName: Text("Akram Chauhan"),
+                accountEmail: Text("HuyBui@gmail.com"),
+                accountName: Text("HuyBui"),
                 currentAccountPicture: CircleAvatar(
                   child: Text("P"),
                 ),
@@ -153,7 +151,9 @@ class _ChefListStage extends State<ChefList> {
               ListTile(
                 leading: Icon(Icons.home),
                 title: Text("Home"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushReplacementNamed(context, '/home');
+                },
               ),
               ListTile(
                 leading: Icon(Icons.dashboard),
