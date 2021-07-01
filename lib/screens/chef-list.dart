@@ -39,102 +39,209 @@ class _ChefListStage extends State<ChefList> {
         body: ListView(
           padding: EdgeInsets.all(0),
           children: [
+            //chef 1
             ListTile(
-              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
-              title: Text("John Stuart"),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            ListTile(
-              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
-              title: Text("Robert Alan "),
-              subtitle: RatingValue(stars: 5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            ListTile(
-              leading:
-                  Image(image: new AssetImage("assets/img/chef-Img-1.jpg")),
-              title: Text("Golden Ramsey"),
-              subtitle: RatingValue(stars: 4.5),
-              onTap: () {
-                Navigator.pushReplacementNamed(context, '/chef-detail');
-              },
-            ),
-            ListTile(
-              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
               title: Text("David Ron Sulivan"),
               subtitle: RatingValue(stars: 5),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
             ),
+            //chef 2
             ListTile(
-              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
-              title: Text("Golden Ramsey"),
-              subtitle: RatingValue(stars: 3.5),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
             ),
+            // chef 3
             ListTile(
-              leading: CircleAvatar(
-                child: Text("6"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 6"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
+            // chef 4
             ListTile(
-              leading: CircleAvatar(
-                child: Text("7"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 7"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
+            //chef 5
             ListTile(
-              leading: CircleAvatar(
-                child: Text("8"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 8"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
+            //chef 6
             ListTile(
-              leading: CircleAvatar(
-                child: Text("9"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 9"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
+            //chef 7
             ListTile(
-              leading: CircleAvatar(
-                child: Text("10"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 10"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
+            //chef 8
             ListTile(
-              leading: CircleAvatar(
-                child: Text("11"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 11"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
+            //chef 9
             ListTile(
-              leading: CircleAvatar(
-                child: Text("12"),
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
               ),
-              title: Text("List Name 12"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
+            ),
+            //chef 10
+            ListTile(
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
+            ),
+            //chef 11
+            ListTile(
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
+            ),
+            //chef 12
+            ListTile(
+              leading: Container(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
           ],
         ),
