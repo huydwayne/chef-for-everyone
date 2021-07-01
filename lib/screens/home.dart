@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:intl/intl.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 
 //widgets
@@ -80,6 +81,13 @@ class _MainHomeStage extends State<MainHome> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Text(
+                  "Special List",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.amberAccent),
+                ),
                 CarouselSlider(
                   options: CarouselOptions(
                     autoPlay: true,
@@ -103,20 +111,43 @@ class _MainHomeStage extends State<MainHome> {
                         child: Text(
                           'Món Á',
                           textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.lime),
                         ),
-                        width: 100,
-                        padding: EdgeInsets.all(15),
+                        width: 120,
+                        height: 120,
+                        padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           image: DecorationImage(
-                              image: AssetImage('assets/img/beef.jpg')),
+                              image: AssetImage('assets/img/asian_button.jpg')),
                         ),
                       ),
                       onPressed: () {
                         Navigator.pushReplacementNamed(context, '/chef-list');
                       },
                     ),
-                    //món á
+
+                    TextButton(
+                      child: Container(
+                        child: Text(
+                          'Món Âu',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.lime),
+                        ),
+                        width: 120,
+                        height: 120,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          image: DecorationImage(
+                              image:
+                                  AssetImage('assets/img/europe_button.png')),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/chef-list');
+                      },
+                    ),
                     // Container(
                     //   child: Column(
                     //     children: <Widget>[
@@ -125,102 +156,20 @@ class _MainHomeStage extends State<MainHome> {
                     //           Navigator.pushReplacementNamed(
                     //               context, '/chef-list');
                     //         },
-                    //
                     //         elevation: 2.0,
                     //         fillColor: Colors.white,
-                    //         child:Container(
-                    //           child: Row(
-                    //             children: [
-                    //               Container(
-                    //               )
-                    //             ],
-                    //           ),
-                    //         ),
+                    //         child: Text("Gia đình"),
                     //         padding: EdgeInsets.all(20.0),
                     //         shape: CircleBorder(),
                     //       )
                     //     ],
                     //   ),
                     // ),
-                    Container(
-                      child: Column(
-                        children: <Widget>[
-                          new RawMaterialButton(
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(
-                                  context, '/chef-list');
-                            },
-                            elevation: 2.0,
-                            fillColor: Colors.white,
-                            child: Text("Món Âu"),
-                            padding: EdgeInsets.all(20.0),
-                            shape: CircleBorder(),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: Column(
-                        children: <Widget>[
-                          new RawMaterialButton(
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(
-                                  context, '/chef-list');
-                            },
-                            elevation: 2.0,
-                            fillColor: Colors.white,
-                            child: Text("Gia đình"),
-                            padding: EdgeInsets.all(20.0),
-                            shape: CircleBorder(),
-                          )
-                        ],
-                      ),
-                    ),
                   ],
                 ),
                 SizedBox(
                   height: 40,
                 ),
-                // Row(
-                //   children: <Widget>[
-                //     new Expanded(
-                //       flex: 5,
-                //       child: Column(
-                //         children: <Widget>[
-                //           new RawMaterialButton(
-                //             onPressed: () {
-                //               Navigator.pushReplacementNamed(
-                //                   context, '/chef-list');
-                //             },
-                //             elevation: 2.0,
-                //             fillColor: Colors.white,
-                //             child: Text("Gia đình"),
-                //             padding: EdgeInsets.all(20.0),
-                //             shape: CircleBorder(),
-                //           )
-                //         ],
-                //       ),
-                //     ),
-                //     // new Expanded(
-                //     //   flex: 5,
-                //     //   child: Column(
-                //     //     children: <Widget>[
-                //     //       new RawMaterialButton(
-                //     //         onPressed: () {
-                //     //           Navigator.pushReplacementNamed(
-                //     //               context, '/chef-list');
-                //     //         },
-                //     //         elevation: 2.0,
-                //     //         fillColor: Colors.white,
-                //     //         child: Text("Sự kiện"),
-                //     //         padding: EdgeInsets.all(20.0),
-                //     //         shape: CircleBorder(),
-                //     //       )
-                //     //     ],
-                //     //   ),
-                //     // ),
-                //   ],
-                // ),
                 SizedBox(
                   height: 30.0,
                 ),
@@ -243,47 +192,3 @@ class _MainHomeStage extends State<MainHome> {
         ));
   }
 }
-
-// class ItemList extends StatelessWidget {
-//   const ItemList({
-//     Key key,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return SingleChildScrollView(
-//       scrollDirection: Axis.horizontal,
-//       child: Row(
-//         children: <Widget>[
-//           ItemCard(
-//             svgSrc: "assets/icons/burger_beer.svg",
-//             title: "Món Âu",
-//
-//             press: () {
-//               Navigator.push(
-//                 context,
-//                 MaterialPageRoute(
-//                   builder: (context) {
-//                     return DetailsScreen();
-//                   },
-//                 ),
-//               );
-//             },
-//           ),
-//           ItemCard(
-//             svgSrc: "assets/icons/chinese_noodles.svg",
-//             title: "Món Á",
-//
-//             press: () {},
-//           ),
-//           ItemCard(
-//             svgSrc: "assets/icons/burger_beer.svg",
-//             title: "Món Âu",
-//
-//             press: () {},
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
