@@ -34,7 +34,7 @@ class _ChefListStage extends State<ChefList> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Danh sách đầu bếp "),
+          title: Text("Danh sách đầu bếp Âu "),
         ),
         body: ListView(
           padding: EdgeInsets.all(0),
@@ -45,8 +45,8 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundImage: NetworkImage(
+                      "https://static5.depositphotos.com/1003434/514/i/600/depositphotos_5147838-stock-photo-attractive-smiling-cook.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
@@ -62,8 +62,8 @@ class _ChefListStage extends State<ChefList> {
                 height: 100,
                 width: 100,
                 child: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                  backgroundImage: NetworkImage(
+                      "https://onha.vn/images/chef/beirutJalalHawchar.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),

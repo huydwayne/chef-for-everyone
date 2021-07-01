@@ -46,7 +46,7 @@ class _AsianChefListStage extends State<AsianChefList> {
                 width: 100,
                 child: CircleAvatar(
                   backgroundImage:
-                      NetworkImage("https://via.placeholder.com/150"),
+                      NetworkImage("https://www.hoidaubepaau.com/wp-content/uploads/2015/12/david-thai.jpg"),
                   backgroundColor: Colors.transparent,
                 ),
               ),
