@@ -13,6 +13,7 @@ import 'screens/onboarding.dart';
 import 'screens/change-password.dart';
 import 'screens/sendotp.dart';
 import 'screens/chef-list.dart';
+import 'screens/asian-chef-list.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
           "/settings": (BuildContext context) => new Settings(),
           "/chef-list": (BuildContext context) => new ChefList(),
           "/chef-detail": (BuildContext context) => new CheftDetail(),
+          "/asian-chef-list": (BuildContext context) => new AsianChefList(),
         });
   }
 }
