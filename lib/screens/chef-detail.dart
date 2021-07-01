@@ -11,14 +11,78 @@ class CheftDetail extends StatefulWidget {
 
 class _CheftDetail extends State<CheftDetail> {
   // This widget is the root of your application.
-  int _count = 0;
+  int _totalAmount = 0;
+  int _totalPrice = 0;
 
-  void _handleAddToCart(action) {
+  List<Map<String, dynamic>> _menu = [
+    {
+      "id": 1,
+      "name": "Beef Steak with Cream Butter",
+      "img": "assets/img/beef.jpg",
+      "price": 20,
+      "amount": 0,
+    },
+    {
+      "id": 2,
+      "name": "Beef Steak",
+      "img": "assets/img/beef.jpg",
+      "price": 40,
+      "amount": 0,
+    }
+  ];
+
+  List<Widget> getList() {
+    List<Widget> menuData = _menu
+        .map(
+          (item) => ListTile(
+            trailing: Wrap(spacing: 2, children: <Widget>[
+              // Text(_count.toString()),
+              (item["amount"] > 0
+                  ? new IconButton(
+                      onPressed: () => _handleAddToCart(item["id"], "remove"),
+                      icon: Icon(
+                        Icons.remove_circle,
+                        size: 22,
+                        color: Colors.grey,
+                      ))
+                  : Text('')),
+              (item["amount"] > 0 ? Text(item["amount"].toString()) : Text('')),
+              new IconButton(
+                  onPressed: () => _handleAddToCart(item["id"], "add"),
+                  icon: Icon(
+                    Icons.add_circle,
+                    size: 22,
+                    color: Colors.orange,
+                  )),
+            ]),
+            selected: true,
+            leading: Container(
+              child: Image.asset(
+                item["img"],
+                width: 100,
+                fit: BoxFit.fill,
+              ),
+            ),
+            title: Text(item["name"]),
+            subtitle: Text("${item["price"]}\$/dish"),
+          ),
+        )
+        .toList();
+
+    return menuData;
+  }
+
+  void _handleAddToCart(id, action) {
+    final index = _menu.indexWhere((element) => element["id"] == id);
     setState(() {
       if (action == "remove") {
-        _count -= 1;
+        _menu[index]["amount"]--;
+        _totalAmount--;
+        _totalPrice -= _menu[index]["price"];
       } else if (action == "add") {
-        _count += 1;
+        _menu[index]["amount"]++;
+        _totalAmount++;
+        _totalPrice += _menu[index]["price"];
       }
     });
   }
@@ -29,7 +93,6 @@ class _CheftDetail extends State<CheftDetail> {
       title: 'Flutter Demo',
       home: Scaffold(
         backgroundColor: Color(0xffffba08),
-
         body: Column(
           children: <Widget>[
             Container(
@@ -83,162 +146,59 @@ class _CheftDetail extends State<CheftDetail> {
               child: Container(
                 color: Colors.white,
                 child: ListView(
-                  children: [
-                    ListTile(
-                      trailing: Wrap(spacing: 2, children: <Widget>[
-                        // Text(_count.toString()),
-                        (_count > 0
-                            ? new IconButton(
-                                onPressed: () => _handleAddToCart("remove"),
-                                icon: Icon(
-                                  Icons.remove_circle,
-                                  size: 22,
-                                  color: Colors.grey,
-                                ))
-                            : Text('')),
-                        (_count > 0 ? Text(_count.toString()) : Text('')),
-                        new IconButton(
-                            onPressed: () => _handleAddToCart("add"),
-                            icon: Icon(
-                              Icons.add_circle,
-                              size: 22,
-                              color: Colors.orange,
-                            )),
-                      ]),
-                      selected: true,
-                      leading: Container(
-                        child: Image.asset(
-                          'assets/img/beef.jpg',
-                          width: 100,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      title: Text("Beef Steak With Cream Butter "),
-                      subtitle: Text("20 dollar/dish"),
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("2"),
-                      ),
-                      title: Text("Pasta Domat Cheese"),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("3"),
-                      ),
-                      title: Text("Cream Cheese Beaf Steak MushRoom"),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("4"),
-                      ),
-                      title: Text("Green Pepper Drilled Salmon "),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("5"),
-                      ),
-                      title: Text("Steamed rice with Sauté prawns"),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("6"),
-                      ),
-                      title: Text("Fried noodle With Sliced Beef"),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("7"),
-                      ),
-                      title: Text(
-                          "Noodle Milk Cheese and Sheep Meat Half Done Beef  "),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("8"),
-                      ),
-                      title: Text("Foie Gras"),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("9"),
-                      ),
-                      title: Text("Sturgeon Egg "),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text("10"),
-                      ),
-                      title: Text("Flounder With Lemon Sauce"),
-                      subtitle: Text("You can specify subtitle"),
-                      onTap: () {},
-                    ),
-                  ],
+                  children: getList(),
                 ),
               ),
             ),
             //Row này dành cho phần CART NAVIGATION
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                //Cái này hiển thị cho số lượng hàng có trong CART
-                SizedBox(
-                  width: 10,
-                ),
-                Badge(
-                  padding: EdgeInsets.all(5),
-                  badgeContent: Text('2'),
-                  child: Container(
-                    child: Icon(
-                      Icons.fastfood_sharp,
-                      size: 40,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  '81000đ',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  width: 100,
-                ),
-                //Này là Button HOÀN TẤT
-                TextButton(
-                  child: Container(
-                    child: Text(
-                      'Hoàn Tất',
-                      textAlign: TextAlign.center,
-                    ),
-                    width: 100,
-                    padding: EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                      color: Colors.amber,
-                    ),
-                  ),
-                  onPressed: () {},
-                ),
-              ],
-            )
+            (_totalAmount != 0
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      //Cái này hiển thị cho số lượng hàng có trong CART
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Badge(
+                        padding: EdgeInsets.all(5),
+                        badgeContent: Text(_totalAmount.toString()),
+                        child: Container(
+                          child: Icon(
+                            Icons.fastfood_sharp,
+                            size: 40,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "${_totalPrice.toString()}\$",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: 100,
+                      ),
+                      //Này là Button HOÀN TẤT
+                      TextButton(
+                        child: Container(
+                          child: Text(
+                            'Hoàn Tất',
+                            textAlign: TextAlign.center,
+                          ),
+                          width: 100,
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            color: Colors.amber,
+                          ),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ],
+                  )
+                : Text(""))
           ],
         ),
       ),
