@@ -105,6 +105,7 @@ class _MainHomeStage extends State<MainHome> {
                   height: 30.0,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     TextButton(
                       child: Container(
@@ -113,8 +114,8 @@ class _MainHomeStage extends State<MainHome> {
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.lime),
                         ),
-                        width: 120,
-                        height: 120,
+                        width: 110,
+                        height: 110,
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -134,14 +135,34 @@ class _MainHomeStage extends State<MainHome> {
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.lime),
                         ),
-                        width: 120,
-                        height: 120,
-                        padding: EdgeInsets.all(10),
+                        width: 110,
+                        height: 110,
+                        padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           image: DecorationImage(
-                              image:
-                                  AssetImage('assets/img/europe_button.png')),
+                              image: AssetImage('assets/img/euro_button.jpg')),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/chef-list');
+                      },
+                    ),
+
+                    TextButton(
+                      child: Container(
+                        child: Text(
+                          'Gia Đình',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.lime),
+                        ),
+                        width: 110,
+                        height: 110,
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          image: DecorationImage(
+                              image: AssetImage('assets/img/asian_button.jpg')),
                         ),
                       ),
                       onPressed: () {
