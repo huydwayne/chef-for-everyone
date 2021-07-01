@@ -141,7 +141,7 @@ class _MainHomeStage extends State<MainHome> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           image: DecorationImage(
-                              image: AssetImage('assets/img/euro_button.jpg')),
+                              image: AssetImage('assets/img/europe_button.jpg')),
                         ),
                       ),
                       onPressed: () {
