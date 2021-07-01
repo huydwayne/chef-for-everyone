@@ -34,52 +34,51 @@ class _ChefListStage extends State<ChefList> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("List view Example - Flutterian"),
+          title: Text("Danh sách đầu bếp "),
         ),
         body: ListView(
           padding: EdgeInsets.all(0),
           children: [
             ListTile(
-              selected: true,
-              leading: CircleAvatar(
-                child: Text("1"),
-              ),
-              title: Text("List Name 1"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: CircleAvatar(
-                child: Text("2"),
-              ),
-              title: Text("List Name 2"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading:
-                  Image(image: new AssetImage("assets/img/chef-Img-1.jpg")),
-              title: Text("Golden Ramsey"),
-              subtitle: RatingValue(stars: 3.5),
+              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
+              title: Text("John Stuart"),
+              subtitle: RatingValue(stars: 5),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
             ),
             ListTile(
-              leading: CircleAvatar(
-                child: Text("4"),
-              ),
-              title: Text("List Name 4"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
+              title: Text("Robert Alan "),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
             ListTile(
-              leading: CircleAvatar(
-                child: Text("5"),
-              ),
-              title: Text("List Name 5"),
-              subtitle: Text("You can specify subtitle"),
-              onTap: () {},
+              leading:
+                  Image(image: new AssetImage("assets/img/chef-Img-1.jpg")),
+              title: Text("Golden Ramsey"),
+              subtitle: RatingValue(stars: 4.5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
+            ),
+            ListTile(
+              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
+              title: Text("David Ron Sulivan"),
+              subtitle: RatingValue(stars: 5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
+            ),
+            ListTile(
+              leading: Image(image: new AssetImage("assets/img/chef1.jpg")),
+              title: Text("Golden Ramsey"),
+              subtitle: RatingValue(stars: 3.5),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/chef-detail');
+              },
             ),
             ListTile(
               leading: CircleAvatar(
