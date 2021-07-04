@@ -129,7 +129,8 @@ class _MainHomeStage extends State<MainHome> {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/asian-chef-list');
+                        Navigator.pushReplacementNamed(
+                            context, '/user-profile');
                       },
                     ),
 

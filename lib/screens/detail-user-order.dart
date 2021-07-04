@@ -1,31 +1,32 @@
-import 'dart:ffi';
 import 'dart:ui';
 import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+// void main() {
+//   runApp(MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('This is detail user oder'),
-          backgroundColor: Colors.blue,
-        ),
-        body: Booking(),
-      ),
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('This is detail user oder'),
+//           backgroundColor: Colors.blue,
+//         ),
+//         body: Booking(),
+//       ),
+//     );
+//   }
+// }
 
 class Booking extends StatefulWidget {
+  Booking({Key key}) : super(key: key);
+
   @override
   _BookingState createState() => _BookingState();
 }
@@ -34,7 +35,7 @@ class _BookingState extends State<Booking> {
   String _selectedDate = "";
   String _selectedTime = "";
 
-  Future<Void> _openDatePicker(BuildContext context) async {
+  Future<dynamic> _openDatePicker(BuildContext context) async {
     final DateTime d = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),
@@ -48,9 +49,9 @@ class _BookingState extends State<Booking> {
     }
   }
 
-  Future<Void> _openTimePicker(BuildContext context) async {
+  Future<dynamic> _openTimePicker(BuildContext context) async {
     final TimeOfDay t =
-    await showTimePicker(context: context, initialTime: TimeOfDay.now());
+        await showTimePicker(context: context, initialTime: TimeOfDay.now());
     if (t != null) {
       setState(() {
         _selectedTime = t.format(context);
@@ -131,7 +132,8 @@ class _BookingState extends State<Booking> {
                     minWidth: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/sendotp');
+                      Navigator.pushReplacementNamed(
+                          context, '/asian-chef-list');
                     },
                     child: Text(
                       "Hoàn Tất",
@@ -145,4 +147,3 @@ class _BookingState extends State<Booking> {
     );
   }
 }
-

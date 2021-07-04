@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_kit_flutter/screens/checkout.dart';
 import 'package:material_kit_flutter/screens/chef-detail.dart';
+import 'package:material_kit_flutter/screens/detail-user-order.dart';
 import 'package:material_kit_flutter/screens/home.dart';
 import 'package:material_kit_flutter/screens/login.dart';
 import 'package:material_kit_flutter/screens/register.dart';
@@ -15,6 +16,7 @@ import 'screens/change-password.dart';
 import 'screens/sendotp.dart';
 import 'screens/chef-list.dart';
 import 'screens/asian-chef-list.dart';
+import 'screens/detail-user-order.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Chef for Everyone",
         debugShowCheckedModeBanner: false,
-        initialRoute: "/home",
+        initialRoute: "/onboarding",
         routes: <String, WidgetBuilder>{
           "/onboarding": (BuildContext context) => new Onboarding(),
           "/login": (BuildContext context) => new LoginPage(),
@@ -37,6 +39,7 @@ class MyApp extends StatelessWidget {
           "/settings": (BuildContext context) => new Settings(),
           "/chef-list": (BuildContext context) => new ChefList(),
           "/chef-detail": (BuildContext context) => new CheftDetail(),
+          "/user-profile": (BuildContext context) => new Booking(),
           "/asian-chef-list": (BuildContext context) => new AsianChefList(),
           "/checkout": (BuildContext context) => new checkout(),
         });
