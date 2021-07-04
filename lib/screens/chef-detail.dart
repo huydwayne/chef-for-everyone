@@ -236,7 +236,7 @@ class _CheftDetail extends State<CheftDetail> {
                             color: Colors.amber,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {Navigator.pushReplacementNamed(context, '/checkout');},
                       ),
                     ],
                   )

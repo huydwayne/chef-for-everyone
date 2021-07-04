@@ -10,7 +10,9 @@ class checkout extends StatefulWidget {
 class _checkoutState extends State<checkout> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Column(children: [
@@ -66,7 +68,7 @@ class _checkoutState extends State<checkout> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 11.33),
+                      //  SizedBox(height: 11.33),
                         Text(
                           "Huy Bùi - 0933255110",
                           style: TextStyle(
@@ -74,7 +76,7 @@ class _checkoutState extends State<checkout> {
                             fontSize: 16,
                           ),
                         ),
-                        SizedBox(height: 11.33),
+                       // SizedBox(height: 11.33),
                         Text(
                           "203 Nguyễn Xí, P.25, Quận Bình Thạnh, TP. HCM",
                           style: TextStyle(
@@ -82,7 +84,7 @@ class _checkoutState extends State<checkout> {
                             fontSize: 16,
                           ),
                         ),
-                        SizedBox(height: 11.33),
+                       // SizedBox(height: 11.33),
                         Text(
                           "08/07/2021 - 18:00 PM",
                           style: TextStyle(
@@ -97,6 +99,8 @@ class _checkoutState extends State<checkout> {
               ),
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
