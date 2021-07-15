@@ -62,7 +62,7 @@ class _BookedCardWithRatingPage extends State<BookedCardWithRating> {
                   size: 25,
                 ),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/your_booking_card');
+                  Navigator.pushReplacementNamed(context, '/history');
                 },
               ),
             ),

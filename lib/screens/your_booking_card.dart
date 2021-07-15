@@ -19,7 +19,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
               centerTitle: true,
               backgroundColor: Colors.amber,
               title: Text(
-                "Giỏ hàng của bạn",
+                "Đơn hàng của bạn",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
