@@ -53,7 +53,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
                         //width: 150,
                         child: TextButton(
                           child: Text(
-                            'Tất Cả Đơn Hàng',
+                            'Đang diễn ra',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {
@@ -75,7 +75,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
                         //width: 150,
                         child: TextButton(
                           child: Text(
-                            'Lịch Sử',
+                            'Đã hoàn thành',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {
