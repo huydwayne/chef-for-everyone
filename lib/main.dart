@@ -45,6 +45,7 @@ import 'chef-screens/chef-profile.dart';
 import 'chef-screens/chef-wallet.dart';
 import 'screens/danh-gia.dart';
 import 'screens/booked-card-with-rating.dart';
+import 'chef-screens/chef-finish-alert.dart';
 
 void main() => runApp(MyApp());
 
@@ -108,6 +109,7 @@ class MyApp extends StatelessWidget {
           "/danh-gia": (BuildContext context) => new DanhGia(),
           "/booked-card-with-rating": (BuildContext context) =>
               new BookedCardWithRating(),
+          "/chef-finish-alert": (BuildContext context) => new ChefFinishAlert(),
         });
   }
 }

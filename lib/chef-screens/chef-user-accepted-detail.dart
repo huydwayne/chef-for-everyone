@@ -371,7 +371,7 @@ class _ChefUserAcceptedDetail extends State<ChefUserAcceptedDetail> {
                                 onPressed: () {
                                   // Thực hiện khi chọn xong phương thức
                                   Navigator.pushReplacementNamed(
-                                      context, '/chef-success-alert');
+                                      context, '/chef-finish-alert');
                                 },
                                 child: Container(
                                   height: 50,
