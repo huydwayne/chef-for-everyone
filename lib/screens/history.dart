@@ -332,7 +332,7 @@ class _UserHistoryState extends State<UserHistory> {
                                   fontWeight: FontWeight.bold),
                             ),
                             IconButton(
-                              icon: Icon(Icons.close),
+                              icon: Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
@@ -425,7 +425,7 @@ class _UserHistoryState extends State<UserHistory> {
                                   fontWeight: FontWeight.bold),
                             ),
                             IconButton(
-                              icon: Icon(Icons.close),
+                              icon: Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
