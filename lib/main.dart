@@ -44,6 +44,8 @@ import 'chef-screens/chef-success-alert.dart';
 import 'chef-screens/chef-profile.dart';
 import 'chef-screens/chef-wallet.dart';
 import 'screens/danh-gia.dart';
+import 'screens/booked-card-with-rating.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -91,7 +93,6 @@ class MyApp extends StatelessWidget {
               new VoucherReviewUserProfile(),
           "/voucher-add-payment": (BuildContext context) =>
               new VoucherAddPayment(),
-          // Chef
           "/chef-home": (BuildContext context) => new MenuDashboardPage(),
           "/chef-user-accepted-detail": (BuildContext context) =>
               new ChefUserAcceptedDetail(),
@@ -105,6 +106,8 @@ class MyApp extends StatelessWidget {
           "/chef-profile": (BuildContext context) => new ChefProfile(),
           "/chef-wallet": (BuildContext context) => new ChefWallet(),
           "/danh-gia": (BuildContext context) => new DanhGia(),
+          "/booked-card-with-rating": (BuildContext context) =>
+              new BookedCardWithRating(),
         });
   }
 }

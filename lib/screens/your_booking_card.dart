@@ -53,7 +53,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
                         //width: 150,
                         child: TextButton(
                           child: Text(
-                            'Đang Diễn Ra',
+                            'Tất Cả Đơn Hàng',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {
@@ -75,7 +75,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
                         //width: 150,
                         child: TextButton(
                           child: Text(
-                            'Đã Hoàn Thành',
+                            'Lịch Sử',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {
@@ -83,6 +83,28 @@ class _YourBookingCardState extends State<YourBookingCard> {
                           },
                         ),
                       ),
+                      // Container(
+                      //   decoration: BoxDecoration(
+                      //     border: Border.all(color: Colors.white54, width: 1.5),
+                      //     color: Colors.black12.withOpacity(0.1),
+                      //     borderRadius: BorderRadius.all(
+                      //       Radius.circular(20),
+                      //     ),
+                      //   ),
+                      //   margin: EdgeInsets.fromLTRB(5, 5, 5, 0),
+                      //   //padding: EdgeInsets.all(5),
+                      //   //width: 150,
+                      //   child: TextButton(
+                      //     child: Text(
+                      //       'Đánh Giá',
+                      //       style: TextStyle(fontSize: 20),
+                      //     ),
+                      //     onPressed: () {
+                      //       Navigator.pushReplacementNamed(
+                      //           context, '/danh-gia');
+                      //     },
+                      //   ),
+                      // )
                     ],
                   ),
                   Container(
@@ -151,7 +173,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
                                 margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
                                 child: Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  MainAxisAlignment.spaceBetween,
                                   children: [
                                     Icon(Icons.access_time),
                                     Container(
