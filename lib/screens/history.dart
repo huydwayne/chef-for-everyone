@@ -32,7 +32,7 @@ class _UserHistoryState extends State<UserHistory> {
                   size: 25,
                 ),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pushReplacementNamed(context, '/your_booking_card');
                 },
               ),
             ),
