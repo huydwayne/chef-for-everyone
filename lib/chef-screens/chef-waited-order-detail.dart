@@ -17,7 +17,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
     TextEditingController customController = TextEditingController();
     return showDialog(context: context, builder: (context){
       return AlertDialog(
-        title: Text("Xin vui lòng cho chúng tôi biết lý do hủy !"),
+        title: Text("Xin vui lòng cho chúng tôi biết lý do bạn bỏ qua đơn này !"),
         content: CupertinoTextField(
           controller: customController,
         ),
@@ -427,7 +427,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                               decoration: BoxDecoration(
                                   color: method != ""
                                       ? Colors.amberAccent
-                                      : Colors.grey,
+                                      : Colors.greenAccent,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(15))),
                               child: TextButton(
@@ -453,7 +453,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                         Row(
                           children: [
                             Container(
-                              width: 400,
+                              width: 200,
                               decoration: BoxDecoration(
                                   color: Colors.grey,
                                   borderRadius:
@@ -471,7 +471,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                                       createAlertDialog(context);
                                     },
                                   child: Text(
-                                    'Hủy Đơn',
+                                    'Bỏ Qua',
                                     style: TextStyle(
                                         fontSize: 18, color: Colors.black),
                                   ),

@@ -28,7 +28,10 @@ class _ChefUserAcceptedDetail extends State<ChefUserAcceptedDetail> {
               MaterialButton(
                 elevation: 5.0,
                 child: Text("Gửi"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(
+                      context, '/chef-home');
+                },
               )
             ],
           );
@@ -395,9 +398,7 @@ class _ChefUserAcceptedDetail extends State<ChefUserAcceptedDetail> {
                           ),
                           child: TextButton(
                             onPressed: () {
-                              // Thực hiện khi chọn xong phương thức
-                              // Navigator.pushReplacementNamed(
-                              //    context, '/chef-success-alert');
+                              createAlertDialog(context);
                             },
                             child: Container(
                               height: 50,
