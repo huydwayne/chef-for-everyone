@@ -99,19 +99,19 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                 SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
-                    // Navigator.pushReplacementNamed(
-                    //     context, '/chef-setting-time');
+                    Navigator.pushReplacementNamed(
+                        context, '/chef-setting-time');
                   },
-                  child: Text("Thông báo",
+                  child: Text("Đặt lịch nhận phục vụ",
                       style: TextStyle(color: Colors.black, fontSize: 22)),
                 ),
                 SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(
-                        context, '/chef-setting-time');
+                        context, '/home');
                   },
-                  child: Text("Đặt lịch nhận phục vụ",
+                  child: Text("Về giao diện khách hàng",
                       style: TextStyle(color: Colors.black, fontSize: 22)),
                 )
               ],
@@ -176,13 +176,12 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                         ),
                       ),
                       IconButton(
-                        icon: Text(
-                          "Back",
-                          style: TextStyle(color: Colors.black, fontSize: 14),
+                        icon: Icon(
+                          CupertinoIcons.bell_fill,
+                          size: 25,
                         ),
                         onPressed: () {
-                          Navigator.pushReplacementNamed(
-                              context, '/user-profile');
+                         // CHUYEN HUONG DEN TRANG THONG BAO
                         },
                       ),
                     ],
@@ -676,7 +675,7 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                           children: [
                             Container(
                                 child: Text(
-                              'Ví Tài Khoản',
+                              'Số Đơn Hủy Tháng Này',
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
@@ -684,7 +683,7 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                             )),
                             Container(
                                 child: Text(
-                              '900.000 VND',
+                              '1',
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             )),
