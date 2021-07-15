@@ -173,7 +173,7 @@ class _YourBookingCardState extends State<YourBookingCard> {
                                 margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
                                 child: Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  MainAxisAlignment.spaceBetween,
                                   children: [
                                     Icon(Icons.access_time),
                                     Container(

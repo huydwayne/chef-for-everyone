@@ -93,7 +93,6 @@ class MyApp extends StatelessWidget {
               new VoucherReviewUserProfile(),
           "/voucher-add-payment": (BuildContext context) =>
               new VoucherAddPayment(),
-          // Chef
           "/chef-home": (BuildContext context) => new MenuDashboardPage(),
           "/chef-user-accepted-detail": (BuildContext context) =>
               new ChefUserAcceptedDetail(),
