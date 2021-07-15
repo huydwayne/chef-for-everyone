@@ -17,24 +17,26 @@ class _LoginPageState extends State<LoginPage> {
       obscureText: false,
       style: style,
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Email",
-          border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Email",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        prefixIcon: Icon(Icons.email_rounded),
+      ),
     );
     final passwordField = TextField(
       obscureText: true,
       style: style,
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Mật khẩu",
-          border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        hintText: "Mật khẩu",
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        prefixIcon: Icon(Icons.enhanced_encryption_sharp),
+      ),
     );
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: MaterialColors.active,
+      color: Colors.amber,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -65,20 +67,17 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
-    final forgetPasswordButton = Material(
-      // elevation: 5.0,
-      // borderRadius: BorderRadius.circular(30.0),
-      color: Colors.white,
+    final forgetPasswordButton = Container(
+      //color: Colors.red,
+      margin: EdgeInsets.fromLTRB(190, 0, 0, 0),
       child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        //padding: EdgeInsets.fromLTRB(200.0, 15.0, 20.0, 15),
         onPressed: () {
           Navigator.pushReplacementNamed(context, '/sendotp');
         },
         child: Text("Quên mật khẩu",
             textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.black, fontWeight: FontWeight.w500)),
+            style: style.copyWith(color: Colors.blueAccent, fontSize: 15)),
       ),
     );
 
@@ -100,25 +99,19 @@ class _LoginPageState extends State<LoginPage> {
                     fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(height: 45.0),
+                SizedBox(height: 40.0),
                 emailField,
-                SizedBox(height: 25.0),
+                SizedBox(height: 20.0),
                 passwordField,
+                forgetPasswordButton,
                 SizedBox(
-                  height: 35.0,
+                  height: 10.0,
                 ),
                 loginButon,
                 SizedBox(
                   height: 10.0,
                 ),
                 registerButton,
-                SizedBox(
-                  height: 15.0,
-                ),
-                forgetPasswordButton,
-                SizedBox(
-                  height: 15.0,
-                ),
               ],
             ),
           ),

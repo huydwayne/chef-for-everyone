@@ -43,7 +43,7 @@ class _RegisterPageState extends State<RegisterPage> {
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: MaterialColors.active,
+      color: Colors.green,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -62,15 +62,15 @@ class _RegisterPageState extends State<RegisterPage> {
       // borderRadius: BorderRadius.circular(30.0),
       color: Colors.white,
       child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        //minWidth: MediaQuery.of(context).size.width,
+        // color: Colors.red,
+        padding: EdgeInsets.fromLTRB(200.0, 0, 10.0, 10.0),
         onPressed: () {
           Navigator.pushReplacementNamed(context, '/login');
         },
-        child: Text("Đã có tài khoản?",
+        child: Text("Đã có tài khoản ?",
             textAlign: TextAlign.center,
-            style: style.copyWith(
-                color: Colors.black, fontWeight: FontWeight.w500)),
+            style: style.copyWith(color: Colors.blueAccent, fontSize: 15)),
       ),
     );
 
@@ -92,23 +92,18 @@ class _RegisterPageState extends State<RegisterPage> {
                     fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(height: 45.0),
+                SizedBox(height: 30.0),
                 emailField,
-                SizedBox(height: 25.0),
+                SizedBox(height: 20.0),
                 passwordField,
-                SizedBox(height: 25.0),
+                SizedBox(height: 20.0),
                 rePasswordField,
-                SizedBox(
-                  height: 35.0,
-                ),
+                // SizedBox(
+                //   height: 35.0,
+                // ),
+                registerButton,//này là nút đã có tài khoản
+
                 loginButon,
-                SizedBox(
-                  height: 10.0,
-                ),
-                registerButton,
-                SizedBox(
-                  height: 15.0,
-                ),
               ],
             ),
           ),

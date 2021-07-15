@@ -26,7 +26,7 @@ class _SendOtp extends State<SendOtp> {
     final sendOtpButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: MaterialColors.active,
+      color: Colors.amber,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),

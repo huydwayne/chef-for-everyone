@@ -6,7 +6,7 @@ class AsianChefList extends StatefulWidget {
   _AsianChefListStage createState() => _AsianChefListStage();
 }
 
-Row RatingValue({double stars}) {
+Row ratingValue({double stars}) {
   final children = <Widget>[];
   var starLeft = stars;
   for (var i = 0; i < stars; i++) {
@@ -52,7 +52,7 @@ class _AsianChefListStage extends State<AsianChefList> {
               ),
               title: Text("Đầu bếp Martin Yun"),
               trailing: Text("5 km"),
-              subtitle: RatingValue(stars: 5),
+              subtitle: ratingValue(stars: 5),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -70,7 +70,7 @@ class _AsianChefListStage extends State<AsianChefList> {
               ),
               title: Text("Dương Huy Khải"),
               trailing: Text("5.5 km"),
-              subtitle: RatingValue(stars: 4.5),
+              subtitle: ratingValue(stars: 4.5),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -88,7 +88,7 @@ class _AsianChefListStage extends State<AsianChefList> {
               ),
               title: Text("Hoàng Hồng"),
               trailing: Text("8 km"),
-              subtitle: RatingValue(stars: 4),
+              subtitle: ratingValue(stars: 4),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
               },
@@ -106,7 +106,7 @@ class _AsianChefListStage extends State<AsianChefList> {
                 ),
               ),
               title: Text("Đầu bếp Phạm Tuấn Hải"),
-              subtitle: RatingValue(stars: 5),
+              subtitle: ratingValue(stars: 5),
               trailing: Text("10 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
@@ -124,7 +124,7 @@ class _AsianChefListStage extends State<AsianChefList> {
                 ),
               ),
               title: Text("Đầu bếp David Thái"),
-              subtitle: RatingValue(stars: 5),
+              subtitle: ratingValue(stars: 5),
               trailing: Text("12 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
@@ -142,7 +142,7 @@ class _AsianChefListStage extends State<AsianChefList> {
                 ),
               ),
               title: Text("Đầu bếp Kento Nguyễn"),
-              subtitle: RatingValue(stars: 4.5),
+              subtitle: ratingValue(stars: 4.5),
               trailing: Text("15 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
@@ -160,7 +160,7 @@ class _AsianChefListStage extends State<AsianChefList> {
                 ),
               ),
               title: Text("Đầu bếp Luke Nguyễn"),
-              subtitle: RatingValue(stars: 4),
+              subtitle: ratingValue(stars: 4),
               trailing: Text("16.2 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');
@@ -178,7 +178,7 @@ class _AsianChefListStage extends State<AsianChefList> {
                 ),
               ),
               title: Text("Đầu bếp Phan Tôn Tịnh Hải"),
-              subtitle: RatingValue(stars: 5),
+              subtitle: ratingValue(stars: 5),
               trailing: Text("19 km"),
               onTap: () {
                 Navigator.pushReplacementNamed(context, '/chef-detail');

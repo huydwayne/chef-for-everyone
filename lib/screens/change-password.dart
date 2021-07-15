@@ -43,14 +43,14 @@ class _ChangePassword extends State<ChangePassword> {
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: MaterialColors.active,
+      color: Colors.amber,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
           Navigator.pushReplacementNamed(context, '/login');
         },
-        child: Text("Gửi",
+        child: Text("Đặt lại mật khẩu",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),
