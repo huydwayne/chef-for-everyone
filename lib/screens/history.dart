@@ -20,7 +20,7 @@ class _UserHistoryState extends State<UserHistory> {
               centerTitle: true,
               backgroundColor: Colors.amber,
               title: Text(
-                "Lịch Sử Hoạt Động",
+                "Đơn Hàng Đã Hoàn Thành",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -32,14 +32,14 @@ class _UserHistoryState extends State<UserHistory> {
                   size: 25,
                 ),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pushReplacementNamed(context, '/your_booking_card');
                 },
               ),
             ),
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  Row(
+                  /*Row(
                     children: [
                       Container(
                         decoration: BoxDecoration(
@@ -83,8 +83,8 @@ class _UserHistoryState extends State<UserHistory> {
                         ),
                       ),
                     ],
-                  ),
-                  Container(
+                  ),*/
+                  /*Container(
                     // decoration: BoxDecoration(
                     //   border: Border.all(color: Colors.white54, width: 1.5),
                     //   color: Colors.black12.withOpacity(0.1),
@@ -100,10 +100,10 @@ class _UserHistoryState extends State<UserHistory> {
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
-                  ),
+                  ),*/
 
 //Chef 1
-                  Container(
+                  /*Container(
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white54, width: 1.5),
                       color: Colors.white.withOpacity(0.3),
@@ -194,9 +194,9 @@ class _UserHistoryState extends State<UserHistory> {
                         ],
                       ),
                     ),
-                  ),
+                  ),*/
 //Chef 2
-                  Container(
+                 /* Container(
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white54, width: 1.5),
                       color: Colors.white.withOpacity(0.3),
@@ -287,9 +287,9 @@ class _UserHistoryState extends State<UserHistory> {
                         ],
                       ),
                     ),
-                  ),
+                  ),*/
 
-                  Container(
+                  /*Container(
                     // decoration: BoxDecoration(
                     //   border: Border.all(color: Colors.white54, width: 1.5),
                     //   color: Colors.black12.withOpacity(0.1),
@@ -304,7 +304,7 @@ class _UserHistoryState extends State<UserHistory> {
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
-                  ),
+                  ),*/
 //Đơn Hàng 1
                   Container(
                     decoration: BoxDecoration(
@@ -332,7 +332,7 @@ class _UserHistoryState extends State<UserHistory> {
                                   fontWeight: FontWeight.bold),
                             ),
                             IconButton(
-                              icon: Icon(Icons.close),
+                              icon: Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
@@ -425,7 +425,7 @@ class _UserHistoryState extends State<UserHistory> {
                                   fontWeight: FontWeight.bold),
                             ),
                             IconButton(
-                              icon: Icon(Icons.close),
+                              icon: Icon(Icons.share),
                               onPressed: () {},
                             ),
                           ],
