@@ -477,7 +477,7 @@ class _UserHistoryState extends State<UserHistory> {
                                         onPressed: () {
                                           Navigator.pushReplacementNamed(
                                               context,
-                                              '/your-booking-card-detail');
+                                              '/booked-card-with-rating');
                                         },
                                         child: Text('Chi tiết'),
                                       ),
