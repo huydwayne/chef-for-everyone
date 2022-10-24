@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:material_kit_flutter/constants.dart';
 import 'chef-home.dart';
 
 class ChefUserAcceptedDetail extends StatefulWidget {
@@ -49,7 +50,7 @@ class _ChefUserAcceptedDetail extends State<ChefUserAcceptedDetail> {
           slivers: [
             SliverAppBar(
               centerTitle: true,
-              backgroundColor: Colors.amber,
+              backgroundColor: themeColor,
               title: Text(
                 "Đơn Hàng",
                 style: TextStyle(

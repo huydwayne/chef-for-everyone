@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/rendering.dart';
 import 'package:intl/intl.dart';
+import 'package:material_kit_flutter/constants.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 import 'package:material_kit_flutter/widgets/app-bar.dart';
 
@@ -24,7 +25,7 @@ class _ChefHistoryStage extends State<ChefHistory> {
           slivers: [
             SliverAppBar(
               centerTitle: true,
-              backgroundColor: Colors.amber,
+              backgroundColor: themeColor,
               title: Text(
                 "Hoạt Động Của Bạn",
                 style: TextStyle(
@@ -72,8 +73,8 @@ class _ChefHistoryStage extends State<ChefHistory> {
                             width: 100,
                             height: 100,
 
-                            child: Image.network(
-                              'https://miro.medium.com/max/1200/1*pHb0M9z_UMhO22HlaOl2zw.jpeg',
+                            child: Image.asset(
+                              "assets/img/sua_chua.png",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -177,8 +178,8 @@ class _ChefHistoryStage extends State<ChefHistory> {
                             width: 100,
                             height: 100,
 
-                            child: Image.network(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFZRVUPoyUZc4Q04KXSFFdm4VLyV1eZEQKA&usqp=CAU',
+                            child: Image.asset(
+                              "assets/img/ve_sinh.png",
                               fit: BoxFit.cover,
                             ),
                           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_kit_flutter/constants.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 
 class ChefSettingTime extends StatefulWidget {
@@ -15,7 +16,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor: themeColor,
           title: Container(
             child: Row(
               children: [
@@ -32,7 +33,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
                   width: 220,
                   child: Center(
                     child: Text(
-                      'Đặt Lịch Nhận Đơn',
+                      'Đăng ký ca nghỉ',
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -48,7 +49,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Thứ 2: 10-08-2021',
+                'Thứ 2: 10-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -87,7 +88,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Thứ 3: 11-08-2021',
+                'Thứ 3: 11-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -126,7 +127,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Thứ 4: 12-08-2021',
+                'Thứ 4: 12-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -165,7 +166,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Thứ 5: 13-08-2021',
+                'Thứ 5: 13-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -204,7 +205,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Thứ 6: 14-08-2021',
+                'Thứ 6: 14-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -243,7 +244,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Thứ 7: 15-08-2021',
+                'Thứ 7: 15-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -282,7 +283,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
               //color: Colors.green,
               width: 100,
               child: Text(
-                'Chủ nhật: 16-08-2021',
+                'Chủ nhật: 16-08-2022',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -316,7 +317,7 @@ class _ChefSettingTimeState extends State<ChefSettingTime> {
             ),
             FloatingActionButton(
               isExtended: true,
-              child: Text('Add'),
+              child: Text('Xác nhận'),
               onPressed: () {
                 Navigator.pushReplacementNamed(context, '/chef-home');
               },

@@ -29,13 +29,13 @@ class Onboarding extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 48.0),
                       child: Text.rich(TextSpan(
-                        text: "Chef for Everyone",
+                        text: "FMS",
                         style: TextStyle(color: Colors.white, fontSize: 58),
                       )),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 24.0),
-                      child: Text("Đầu bếp là của bạn.",
+                      child: Text("Sữa chữa nội thất dễ dàng.",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,

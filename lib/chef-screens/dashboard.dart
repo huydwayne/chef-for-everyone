@@ -70,6 +70,15 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
               children: <Widget>[
                 TextButton(
                   onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, '/home');
+                  },
+                  child: Text("Home",
+                      style: TextStyle(color: Colors.black, fontSize: 22)),
+                ),
+                SizedBox(height: 10),
+                TextButton(
+                  onPressed: () {
                     Navigator.pushReplacementNamed(context, '/chef-profile');
                   },
                   child: Text("Tài khoản",
@@ -89,31 +98,22 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                 ),
                 SizedBox(height: 10),
 
-                TextButton(
+                /*TextButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, '/chef-wallet');
                   },
                   child: Text("Ví Tài Khoản",
                       style: TextStyle(color: Colors.black, fontSize: 22)),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10),*/
                 TextButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(
                         context, '/chef-setting-time');
                   },
-                  child: Text("Đặt lịch nhận phục vụ",
+                  child: Text("Đăng ký ca nghỉ",
                       style: TextStyle(color: Colors.black, fontSize: 22)),
                 ),
-                SizedBox(height: 10),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                        context, '/home');
-                  },
-                  child: Text("Về giao diện khách hàng",
-                      style: TextStyle(color: Colors.black, fontSize: 22)),
-                )
               ],
             ),
           ),
@@ -161,19 +161,10 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                           });
                         },
                       ),
-                      Text("                    Nhận Đơn",
+                      Text("                    ",
                           style: TextStyle(fontSize: 24, color: Colors.black)),
                       Container(
-                        child: Switch(
-                          activeColor: Colors.green,
-                          value: status,
-                          onChanged: (value) {
-                            print("VALUE : $value");
-                            setState(() {
-                              status = value;
-                            });
-                          },
-                        ),
+
                       ),
                       IconButton(
                         icon: Icon(
@@ -224,8 +215,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                             // margin: EdgeInsets.fromLTRB(15, 0, 5, 0),
                             width: 100,
                             height: 120,
-                            child: Image.network(
-                              'https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/user.png',
+                            child: Image.asset(
+                              "assets/img/sua_chua.png",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -257,7 +248,7 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                                         width: 2,
                                       ),
                                       Text(
-                                        'Thứ 5: 19-07-2021',
+                                        'Thứ 5: 19-07-2022',
                                         style: TextStyle(color: Colors.blue),
                                       ),
                                     ],
@@ -348,8 +339,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                             width: 100,
                             height: 100,
 
-                            child: Image.network(
-                              'https://miro.medium.com/max/1200/1*pHb0M9z_UMhO22HlaOl2zw.jpeg',
+                            child: Image.asset(
+                              "assets/img/ve_sinh.png",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -380,7 +371,7 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                                       SizedBox(
                                         width: 2,
                                       ),
-                                      Text('Thứ 5: 19-07-2021'),
+                                      Text('Thứ 5: 19-07-2022'),
                                       SizedBox(
                                         width: 55,
                                       ),
@@ -480,8 +471,8 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                             width: 100,
                             height: 100,
 
-                            child: Image.network(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFZRVUPoyUZc4Q04KXSFFdm4VLyV1eZEQKA&usqp=CAU',
+                            child: Image.asset(
+                              "assets/img/ve_sinh.png",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -511,7 +502,7 @@ class _MenuDashboardPageState extends State<MenuDashboardPage>
                                       SizedBox(
                                         width: 2,
                                       ),
-                                      Text('Thứ 7: 21-07-2021'),
+                                      Text('Thứ 7: 21-07-2022'),
                                       SizedBox(
                                         width: 55,
                                       ),

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:material_kit_flutter/constants.dart';
 
 class ChefWaitedOrderDetail extends StatefulWidget {
   ChefWaitedOrderDetail({Key key}) : super(key: key);
@@ -46,7 +47,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
           slivers: [
             SliverAppBar(
               centerTitle: true,
-              backgroundColor: Colors.amber,
+              backgroundColor: themeColor,
               title: Text(
                 "Thông tin đơn khách hàng",
                 style: TextStyle(
@@ -171,7 +172,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                                 width: 10,
                               ),
                               Text(
-                                'Thứ 7: 21-07-2021 ',
+                                'Thứ 7: 21-07-2022 ',
                                 style: TextStyle(
                                     fontSize: 20,
                                     color: Colors.blueAccent,
@@ -232,7 +233,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                                   // margin: EdgeInsets.symmetric(horizontal: 0),
                                   child: TextButton(
                                     child: Text(
-                                      "- 1 khai vị: Gà xào hạt điều",
+                                      "- Nẹp chân gỗ ghế sofa nhỏ",
                                       style: TextStyle(
                                           fontSize: 15, color: Colors.black),
                                     ),
@@ -246,7 +247,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                                   // margin: EdgeInsets.symmetric(horizontal: 0),
                                   child: TextButton(
                                     child: Text(
-                                      "- 1 món chính: Lẩu Thái",
+                                      "- Bọc da sofa nhỏ",
                                       style: TextStyle(
                                           fontSize: 15, color: Colors.black),
                                     ),
@@ -260,7 +261,7 @@ class _ChefWaitedOrderDetailPage extends State<ChefWaitedOrderDetail> {
                                   // margin: EdgeInsets.symmetric(horizontal: 0),
                                   child: TextButton(
                                     child: Text(
-                                      "- 1 món phụ: Chè Sen",
+                                      "- Thay mút sofa nhỏ",
                                       style: TextStyle(
                                           fontSize: 15, color: Colors.black),
                                     ),

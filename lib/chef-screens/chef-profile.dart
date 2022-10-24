@@ -5,6 +5,7 @@ import 'package:flutter/rendering.dart';
 
 //widgets
 import 'chef-bottom-nav-bar.dart';
+import '/constants.dart';
 
 class ChefProfile extends StatefulWidget {
   ChefProfile({Key key}) : super(key: key);
@@ -25,7 +26,7 @@ class _ChefProfileStage extends State<ChefProfile> {
               Navigator.pushReplacementNamed(context, '/chef-home');
             },
           ),
-          backgroundColor: Colors.amber,
+          backgroundColor: themeColor,
           centerTitle: true,
           title: Text('Thông Tin Cá Nhân'),
         ),
@@ -39,7 +40,7 @@ class _ChefProfileStage extends State<ChefProfile> {
               alignment: Alignment.center,
               child: CircleAvatar(
                 backgroundImage: NetworkImage(
-                    'https://www.hoidaubepaau.com/wp-content/uploads/2015/12/david-thai.jpg'),
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFZRVUPoyUZc4Q04KXSFFdm4VLyV1eZEQKA&usqp=CAU'),
                 maxRadius: 70,
               ),
             ),
@@ -49,7 +50,7 @@ class _ChefProfileStage extends State<ChefProfile> {
                   Expanded(
                     child: Center(
                       child: Text(
-                        'Đầu Bếp David Thái',
+                        'Trần Hoàng Thái',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),

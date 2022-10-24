@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_kit_flutter/constants.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 
 class ChangePassword extends StatefulWidget {
@@ -43,7 +44,7 @@ class _ChangePassword extends State<ChangePassword> {
     final loginButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Colors.amber,
+      color: themeColor,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -71,7 +72,7 @@ class _ChangePassword extends State<ChangePassword> {
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
-                    "assets/img/logo.png",
+                    "assets/img/FMS_logo.png",
                     fit: BoxFit.contain,
                   ),
                 ),

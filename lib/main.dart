@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Chef for Everyone",
+        title: "FMS",
         debugShowCheckedModeBanner: false,
         initialRoute: "/login",
         routes: <String, WidgetBuilder>{
@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
           "/sendotp": (BuildContext context) => new SendOtp(),
           "/change-password": (BuildContext context) => new ChangePassword(),
           "/register": (BuildContext context) => new RegisterPage(),
-          "/home": (BuildContext context) => new MainHome(),
+          "/home": (BuildContext context) => new MenuDashboardPage(),
           "/components": (BuildContext context) => new Components(),
           "/profile": (BuildContext context) => new Profile(),
           "/settings": (BuildContext context) => new Settings(),

@@ -88,7 +88,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
-                    "assets/img/logo.png",
+                    "assets/img/FMS_logo.png",
                     fit: BoxFit.contain,
                   ),
                 ),
